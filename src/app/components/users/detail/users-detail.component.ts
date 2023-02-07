@@ -23,7 +23,7 @@ export class UsersDetailComponent {
 
   ngOnInit() {
     this.router.params.subscribe((p) => {
-      this.userId = p.id;
+      this.userId = p['id'];
     });
     this.getData(this.userId);
   }
