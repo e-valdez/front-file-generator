@@ -1,0 +1,45 @@
+<div class="user-detail">
+  <form class="custom-form">
+    <h1>Detalle usuario</h1>
+    <input
+      type="text"
+      name="nombre"
+      required="required"
+      [(ngModel)]="nombre"
+      #it="ngModel"
+      readonly
+    />
+    <input
+      type="email"
+      name="email"
+      required="required"
+      [(ngModel)]="email"
+      #it="ngModel"
+      readonly
+    />
+    <input
+      type="text"
+      readonly
+      name="username"
+      required="required"
+      [(ngModel)]="username"
+      #it="ngModel"
+    />
+    <input
+      type="password"
+      name="password"
+      placeholder="******"
+      required="required"
+      [(ngModel)]="password"
+      #it="ngModel"
+      readonly
+    />
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+    <button style="margin: 5px" (click)="editarUser()">
+      Editar
+    </button>
+    <button style="margin: 5px" (click)="goToHome()">
+      Ir a home
+    </button>
+  </form>
+</div>

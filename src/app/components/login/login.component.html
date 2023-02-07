@@ -1,0 +1,25 @@
+<div class="login">
+  <form class="custom-form" method="post">
+    <h1>Login</h1>
+    <input
+      type="text"
+      name="username"
+      placeholder="Username"
+      required="required"
+      [(ngModel)]="username"
+      #it="ngModel"
+    />
+    <input
+      type="password"
+      name="password"
+      placeholder="Password"
+      required="required"
+      [(ngModel)]="password"
+      #it="ngModel"
+    />
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+    <button type="submit" (click)="login()">Iniciar Sesion</button>
+    <button type="submit" (click)="registrar()">Crear Usuario</button>
+  </form>
+</div>
