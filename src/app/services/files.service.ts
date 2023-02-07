@@ -7,7 +7,7 @@ import { CookieService } from 'ngx-cookie-service';
   providedIn: 'root',
 })
 export class FilesGeneratorService {
-  basePath = 'https://backend-file-generator.netlify.app/.netlify/functions/api';
+  basePath = 'https://back-file-generator.netlify.app/.netlify/functions/api';
   constructor(private http: HttpClient, private cookies: CookieService) {}
 
   getFileData(type: string): Observable<IFileData> {

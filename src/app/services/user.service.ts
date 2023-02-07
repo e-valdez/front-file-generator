@@ -8,7 +8,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
   providedIn: 'root',
 })
 export class UsersService {
-  basePath = 'https://backend-file-generator.netlify.app/.netlify/functions/api';
+  basePath = 'https://back-file-generator.netlify.app/.netlify/functions/api';
   constructor(private http: HttpClient, private cookies: CookieService) {}
 
   login(user: { username: string; password: string }): Observable<any> {
